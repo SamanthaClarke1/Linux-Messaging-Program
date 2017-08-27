@@ -1,0 +1,5 @@
+!help
+!cmds
+!help
+!cmds
+!leaveserver
