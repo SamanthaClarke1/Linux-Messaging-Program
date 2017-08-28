@@ -47,20 +47,6 @@ def chipfortype(data, isbytes=True):
     return dtype, data
 
 
-keyfile = open("public_shit.json", "r+")
-
-#load the public keys
-def load_keys():
-    data = keyfile.read().replace('\n', '')
-    return json.loads(data)
-
-#save the public keys
-def save_keys(ddata):
-    ndata = json.dumps(ddata, indent=4, sort_keys=True)
-    keyfile.seek(0)
-    keyfile.truncate()
-    keyfile.write(ndata)
-
 # access public keys
 ## TODO
 def get_public_keys(ip):

@@ -1,4 +1,4 @@
-#client http://www.binarytides.com/code-chat-application-server-client-sockets-python/ reference
+# client http://www.binarytides.com/code-chat-application-server-client-sockets-python/ reference
 
 import Crypto
 from Crypto.PublicKey import RSA
@@ -19,7 +19,7 @@ random_generator = Random.new().read
 def update_pub_key(key):
     pubkey = key.publickey()
     formattedpubkey = pubkey.exportKey("PEM")
-    #print(formattedpubkey.decode("utf-8"))
+    # print(formattedpubkey.decode("utf-8"))
     s.send(bytes("{keyset}" + formattedpubkey.decode("utf-8"), "utf-8"))
 
 # send a request for a public key
@@ -49,16 +49,9 @@ def p_load_keys():
     data = privfile.read().replace('\n', '')
     return json.loads(data)
 
-#save the public keys
-def p_save_keys(ddata):
-    ndata = json.dumps(ddata, indent=4, sort_keys=True)
-    privfile.seek(0)
-    privfile.truncate()
-    privfile.write(ndata)
-
 
 s = socket.socket()                     # Create a socket object
-host = s.getsockname()[0]                 #socket.gethostname() # Get local machine name
+host = s.getsockname()[0]               # socket.gethostname() # Get local machine name
 port = 5757                             # Reserve a port for your service.
 encoding = 'utf-8'
 myname = "YOU"

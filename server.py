@@ -37,15 +37,10 @@ server_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1) # sets optio
 server_socket.bind(("0.0.0.0", port)) # bind to local machine
 server_socket.listen(10) # listen 10 seconds for a connection
 
-try:
-    publicfile = hc.load_keys()
-    public_keys = publicfile["keys"]
-    names = {}
-except:
-    print("\nI guess this is your first time here, making some new files...\n")
-    public_keys = {}
-    names = {}
-    hc.save_keys({"keys":public_keys, "names":names})
+publicfile = {"keys": {}, "names":{}}
+public_keys = publicfile["keys"]
+names = {}
+
 # Add server socket to the list of readable connections
 connections.append(server_socket)
 print("Chat server on port " + str(port) + " .   Host: " + str(host))
@@ -157,10 +152,6 @@ while True:
                 sock.close()
                 connections.remove(sock)
                 continue
-    try:
-        hc.save_keys({"keys": public_keys, "names": names})
-    except:
-        print(REDBC+"Error saving, check L94"+NRMBC)
 
     for sock in connections:
         if sock != server_socket:
