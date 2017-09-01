@@ -220,11 +220,8 @@ if __name__ == "__main__":
                     print("\t| . the operating system / command line           |")
                     print("\t|  > !leaveserver -exits the application.         |")
                     print("\t| . this is reccomended over ctrl+C               |")
-                    print("\t|  > !printpublickey -prints your public key      |")
                     print("\t|  > !lsids {name} -lists the possible            |")
                     print("\t| . server id's for a name. See !lsall.           |")
-                    print("\t|  > !lsall -lists all the people connected to    |")
-                    print("\t| . the server at that time, id, then name.       |")
                     print("\t|  > !pm {pId} {message} -attempts to pm the id   |")
                     print("\t| . supplied by pId. To get id's from names,      |")
                     print("\t| . use !lsids {name} .                           |")
@@ -290,9 +287,6 @@ if __name__ == "__main__":
                         s.send(bytes("{newname}"+myname, "utf-8"))
                     else:
                         print("First letter must be alphabetical!")
-
-                elif msg == "!printpublickey\n":
-                    print(my_public_key)
 
                 else:
                     s.send(bytes("{msg}" + msg, "utf-8"))

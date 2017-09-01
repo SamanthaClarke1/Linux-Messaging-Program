@@ -47,23 +47,6 @@ def chipfortype(data, isbytes=True):
     return dtype, data
 
 
-# access public keys
-## TODO
-def get_public_keys(ip):
-    return 12345689
-
-# send a message returns true if successful
-## TODO
-def send_message(ip):
-    return True
-
-# create a public key return persons ip
-## TODO
-def generate_public_key():
-    key = ""
-    for i in range (0, 256):
-        key += str(randint(0, 1))
-    return key
 
 def broadcast_data (s, dtype, message, connections, server_socket):
     #Do not send the message to master socket and the client who has send us the message
