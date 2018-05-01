@@ -1,5 +1,6 @@
-TBH, 99 percent of this has just been me wanting to learn linux / unix / linux sockets in python and play around with linux. Although I am quite happy with the direction it's taking. If you're gonna run a Windows server, which I actually do reccomend, you'll need the pycrypto library installed, and a copy of python, preferably 3.5. This is because Windows doesn't like stocking 3rd party applications with its software, unless they pay them a lot of money. So, just to be clear:
+TBH, 99 percent of this has just been me wanting to learn linux / unix / linux sockets in python and play around with linux. Although I am quite happy with the direction it's taking. If you're gonna run a Windows server, which I actually do reccomend, you'll need the pycrypto library installed, and a copy of python, preferably 3.5.
 
+Dependencies:
 -- PyCrypto  v  2.6.1  :  https://github.com/nsrathjen/pycrypto-py3.5-win64-binary/blob/master/pycrypto-2.6.1.win-amd64-py3.5.exe
 -- Python    v  3.5.2  :  https://www.python.org/downloads/release/python-352/
 
